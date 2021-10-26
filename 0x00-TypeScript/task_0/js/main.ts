@@ -36,3 +36,5 @@ studentList.forEach(student => {
     document.createTextNode(student.location)
   );
 });
+
+document.body.appendChild(table);
