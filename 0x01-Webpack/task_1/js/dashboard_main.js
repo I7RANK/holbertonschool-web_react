@@ -20,4 +20,7 @@ function updateCounter() {
   $('#count').text(counter() + ' clicks on the button');
 }
 
-$('#click-here').on('click', _.debounce(updateCounter, 300));
+$('#click-here').on('click', _.debounce(updateCounter, 300, {
+  leading: true,
+  trailing: false,
+}));
