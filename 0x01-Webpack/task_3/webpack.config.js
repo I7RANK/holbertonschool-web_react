@@ -4,6 +4,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
+  devtool: 'inline-source-map',
   entry: {
     header: './modules/header/header.js',
     body: './modules/body/body.js',
@@ -20,7 +21,7 @@ module.exports = {
     port: 8564,
   },
   optimization: {
-    runtimeChunk: 'single'
+    runtimeChunk: 'all'
   },
   module: {
     rules: [
