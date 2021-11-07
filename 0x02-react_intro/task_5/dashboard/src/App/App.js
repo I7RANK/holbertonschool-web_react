@@ -1,7 +1,7 @@
 import React from "react";
-import holbertonLogo from './Holberton-logo.jpg';
+import holbertonLogo from '../assets/Holberton-logo.jpg';
 import './App.css';
-import { getFullYear, getFooterCopy } from './utils';
+import { getFullYear, getFooterCopy } from '../utils/utils';
 
 function App() {
   return (
@@ -17,11 +17,11 @@ function App() {
           Login to access the full dashboard
         </p>
 
-        <label for="email">email</label><br />
+        <label htmlFor="email">email</label><br />
         <input type="email" id="email" name="email"></input><br />
         <br />
 
-        <label for="password">password</label><br />
+        <label htmlFor="password">password</label><br />
         <input type="password" id="password" name="password"></input><br />
         <br />
 
