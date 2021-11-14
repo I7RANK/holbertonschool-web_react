@@ -1,8 +1,11 @@
 import React from 'react';
 import CourseListRow from './CourseListRow';
 import CourseShape from './CourseShape';
+import PropTypes from 'prop-types';
 
 function CourseList(props) {
+  const { listCourses } = props;
+
   return (
     <table id="CourseList">
       <thead>
