@@ -18,6 +18,10 @@ class BodySection extends Component {
   }
 }
 
+BodySection.defaultProps = {
+  title: "",
+};
+
 BodySection.propTypes = {
   title: PropTypes.string,
 };

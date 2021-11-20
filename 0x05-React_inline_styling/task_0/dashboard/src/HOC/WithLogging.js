@@ -1,7 +1,8 @@
 import React from "react";
 
 function WithLogging(WrappedComponent) {
-  const componentName = WrappedComponent.displayName;
+  const componentName =
+    WrappedComponent.displayName || WrappedComponent.name || "Component";
 
   class HOC extends React.Component {
     componentDidMount() {
@@ -9,18 +10,14 @@ function WithLogging(WrappedComponent) {
     }
 
     componentWillUnmount() {
-      console.log(
-        `Component ${componentName} is going to unmount`
-      );
+      console.log(`Component ${componentName} is going to unmount`);
     }
 
     render() {
       return <WrappedComponent {...this.props} />;
     }
   }
-
   HOC.displayName = `WithLogging(${componentName})`;
-
   return HOC;
 }
 

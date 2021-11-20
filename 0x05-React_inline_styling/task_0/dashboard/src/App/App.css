@@ -1,11 +1,12 @@
-* {
-    font-family: 'Calibri';
-}
-
 :root {
-    --primary-color: #e0354b;
+  --main-color: #e01d3f;
 }
 
 .App {
-    text-align: center;
+  border-bottom: 3px solid var(--main-color);
+}
+
+.App-body {
+  display: flex;
+  justify-content: center;
 }
