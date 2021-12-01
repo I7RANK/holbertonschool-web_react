@@ -9,6 +9,9 @@ const map = Map({
   6: 'Lucas',
 });
 
-const map2 = map.merge({2: 'Benjamin', 4: 'Oliver'});
+const map2 = map.withMutations(function (map) {
+  map.set('2', 'Benjamin');
+  map.set('4', 'Oliver');
+});
 
 export default { map, map2 };
